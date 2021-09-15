@@ -6,6 +6,7 @@ new Vue({
   },
   methods: {
     sayHi: function () {
+      this.message = 'hello, vue';
       return this.message;
     },
     sayHello: function () {
