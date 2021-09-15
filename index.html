@@ -27,6 +27,13 @@
       <a v-bind="urlObject">Twitter</a>
       
       <p v-text="message"></p>
+
+
+      <p>現在{{clickNum}}回クリックされました</p>
+      <!-- v-onの引数にはdom操作を指定する -->
+      <button v-on:click="clickNum += 1">CountUp1</button>
+      <!-- 関数を指定することも可能、引数が無い場合には()を省略してもOK -->
+      <button v-on:click="countUp">CountUp2</button>
     </div>
 
     <script src="./main.js"></script>

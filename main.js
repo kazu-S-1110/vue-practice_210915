@@ -11,6 +11,7 @@ new Vue({
       href: 'https://twitter.com',
       id: 12,
     },
+    clickNum: 0,
   },
   methods: {
     sayHi: function () {
@@ -19,6 +20,9 @@ new Vue({
     },
     sayHello: function () {
       return this.hoge;
+    },
+    countUp: function () {
+      this.clickNum += 1;
     },
   },
 });
