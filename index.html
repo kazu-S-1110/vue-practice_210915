@@ -36,8 +36,12 @@
       <button v-on:click="countUp">CountUp2</button>
 
       <!-- 既存のものと合わせて引数を持たせたい場合には$を使用する -->
-      <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor</p>
+      <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor, <span v-on:mousemove.stop>
+        and this is non-react
+      </span></p>
       <p>X:{{x}}, Y:{{y}}</p>
+      <!-- イベント修飾子はつなげることも可能 -->
+      <a v-on:click.prevent.stop href="https://google.com">Google</a>
     </div>
 
     <script src="./main.js"></script>

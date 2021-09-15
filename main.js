@@ -31,5 +31,11 @@ new Vue({
       this.x = event.clientX / divNum;
       this.y = event.clientY / divNum;
     },
+    // 下のがイベント修飾子、これを簡単に実装できる機能がvueにある
+    // イベントが発火させないところに.stopって入れるだけ
+    // noEvent: function (event) {
+    //   event.stopPropagation() => .stop
+    //   event.preventDefault() => .prevent
+    // },
   },
 });
