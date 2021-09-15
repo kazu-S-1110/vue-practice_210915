@@ -12,6 +12,9 @@
       <p v-once>{{ message }}</p>
       <p>{{ sayHi()}}</p>
       <p>{{ sayHello() }}</p>
+      <p>{{el}}</p>
+      <!-- v-htmlを用いることでdata内のタグを認識してくれる、注意点としてクロスサイトスクリプティング。悪意を持ってスクリプトタグを含めたものを含ませた場合にはAlertを表示したりcookieを撮られたりするので要注意。 -->
+      <p v-html="el"></p> 
       <p v-text="message"></p>
     </div>
 

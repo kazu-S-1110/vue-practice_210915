@@ -3,6 +3,7 @@ new Vue({
   data: {
     message: 'hello!',
     hoge: 'hogehoge',
+    el: '<h1>h1ですよ</h1>',
   },
   methods: {
     sayHi: function () {
