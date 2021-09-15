@@ -26,9 +26,10 @@ new Vue({
     countUp: function () {
       this.clickNum += 1;
     },
-    changeMousePosition: function (e) {
-      this.x = e.clientX;
-      this.y = e.clientY;
+    // $をつける際にはeventとしないと動作しなかった、、、
+    changeMousePosition: function ($event, divNum) {
+      this.x = event.clientX / divNum;
+      this.y = event.clientY / divNum;
     },
   },
 });

@@ -35,7 +35,8 @@
       <!-- 関数を指定することも可能、引数が無い場合には()を省略してもOK -->
       <button v-on:click="countUp">CountUp2</button>
 
-      <p v-on:mousemove="changeMousePosition">On mouseCursor</p>
+      <!-- 既存のものと合わせて引数を持たせたい場合には$を使用する -->
+      <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor</p>
       <p>X:{{x}}, Y:{{y}}</p>
     </div>
 
