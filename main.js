@@ -4,6 +4,13 @@ new Vue({
     message: 'hello!',
     hoge: 'hogehoge',
     el: '<h1>h1ですよ</h1>',
+    url: 'http://google.com',
+    attribute: 'href',
+    idNum: 12,
+    urlObject: {
+      href: 'https://twitter.com',
+      id: 12,
+    },
   },
   methods: {
     sayHi: function () {

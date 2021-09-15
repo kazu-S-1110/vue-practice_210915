@@ -15,6 +15,17 @@
       <p>{{el}}</p>
       <!-- v-htmlを用いることでdata内のタグを認識してくれる、注意点としてクロスサイトスクリプティング。悪意を持ってスクリプトタグを含めたものを含ませた場合にはAlertを表示したりcookieを撮られたりするので要注意。 -->
       <p v-html="el"></p> 
+      <!-- v-bindを使用する際は:「引数」をつける -->
+      <a v-bind:href="url">google1</a><br>
+      <!-- また、v-bindは省略することも可能 -->
+      <a :href="url">google2</a><br>
+      <!-- さらに、v-bindの引数も動的に変えることが可能 -->
+      <a :[attribute]="url">google3</a><br>
+      <!-- さらにさらに、v-bindに複数の値を持たせることも可能 -->
+      <a v-bind="{href: url, id: idNum}">google4</a><br>
+      <!-- さらにのさらに、これも冗長なのでオブジェクトを渡した方が楽 -->
+      <a v-bind="urlObject">Twitter</a>
+      
       <p v-text="message"></p>
     </div>
 
