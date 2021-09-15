@@ -34,6 +34,9 @@
       <button v-on:click="clickNum += 1">CountUp1</button>
       <!-- 関数を指定することも可能、引数が無い場合には()を省略してもOK -->
       <button v-on:click="countUp">CountUp2</button>
+
+      <p v-on:mousemove="changeMousePosition">On mouseCursor</p>
+      <p>X:{{x}}, Y:{{y}}</p>
     </div>
 
     <script src="./main.js"></script>

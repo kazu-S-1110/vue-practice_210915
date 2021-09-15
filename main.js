@@ -12,6 +12,8 @@ new Vue({
       id: 12,
     },
     clickNum: 0,
+    x: 0,
+    y: 0,
   },
   methods: {
     sayHi: function () {
@@ -23,6 +25,10 @@ new Vue({
     },
     countUp: function () {
       this.clickNum += 1;
+    },
+    changeMousePosition: function (e) {
+      this.x = e.clientX;
+      this.y = e.clientY;
     },
   },
 });
