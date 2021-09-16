@@ -42,6 +42,9 @@
       <p>X:{{x}}, Y:{{y}}</p>
       <!-- イベント修飾子はつなげることも可能 -->
       <a v-on:click.prevent.stop href="https://google.com">Google</a>
+
+      <!-- キー修飾子の使い方は以下のような感じ -->
+      <input type="text" v-on:keyup.enter="myAlert">
     </div>
 
     <script src="./main.js"></script>
