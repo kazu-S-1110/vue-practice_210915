@@ -48,6 +48,9 @@
 
       <!-- v-onの引数を動的にする方法 -->
       <button v-on:[e]="myAlert">v-on</button>
+      <!-- v-onは省略して書くことも可能 -->
+      <button @[e]="myAlert">v-on2</button>
+
     </div>
 
     <script src="./main.js"></script>
