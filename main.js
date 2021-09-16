@@ -12,6 +12,7 @@ new Vue({
       id: 12,
     },
     clickNum: 0,
+    e: 'click',
     x: 0,
     y: 0,
   },

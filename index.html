@@ -45,6 +45,9 @@
 
       <!-- キー修飾子の使い方は以下のような感じ -->
       <input type="text" v-on:keyup.enter="myAlert">
+
+      <!-- v-onの引数を動的にする方法 -->
+      <button v-on:[e]="myAlert">v-on</button>
     </div>
 
     <script src="./main.js"></script>
