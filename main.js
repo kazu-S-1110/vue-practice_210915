@@ -58,4 +58,14 @@ new Vue({
       alert('Alert!!!');
     },
   },
+  watch: {
+    // watchは非同期処理に最適、computedは同期的に動作する
+    counter: function () {
+      // dataへのアクセスは特殊。thisの直接はだめ
+      var vm = this;
+      setTimeout(function () {
+        vm.clickNum = 0;
+      }, 3000);
+    },
+  },
 });
