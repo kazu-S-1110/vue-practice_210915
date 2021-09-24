@@ -15,6 +15,15 @@ new Vue({
     e: 'click',
     x: 0,
     y: 0,
+    // dataから別dataにアクセスすることはできない
+  },
+  // dataの値に応じて動的に表現するとき、computedプロパティを使用する
+  computed: {
+    lessThanThree: function () {
+      return this.clickNum > 3
+        ? 'you clicked over than 3'
+        : 'you clicked less than 3';
+    },
   },
   methods: {
     sayHi: function () {
