@@ -25,6 +25,7 @@ new Vue({
         : 'you clicked less than 3';
     },
   },
+  // methodsは画面がレンダリングされる度に実行される(めっちゃ不便やんけ)、computedは参照している値が変更された時のみ実行される
   methods: {
     sayHi: function () {
       this.message = 'hello, vue';
@@ -40,6 +41,12 @@ new Vue({
     changeMousePosition: function ($event, divNum) {
       this.x = event.clientX / divNum;
       this.y = event.clientY / divNum;
+    },
+    lessThanThreeMethod: function () {
+      // console.log('run method!');
+      return this.clickNum > 3
+        ? 'you clicked over than 3'
+        : 'you clicked less than 3';
     },
     // 下のがイベント修飾子、これを簡単に実装できる機能がvueにある
     // イベントが発火させないところに.stopって入れるだけ
