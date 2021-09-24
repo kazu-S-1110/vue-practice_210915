@@ -24,6 +24,9 @@ new Vue({
         ? 'you clicked over than 3'
         : 'you clicked less than 3';
     },
+    countUpComputed: function () {
+      return (this.clickNum += 1);
+    },
   },
   // methodsは画面がレンダリングされる度に実行される(めっちゃ不便やんけ)、computedは参照している値が変更された時のみ実行される
   methods: {
@@ -34,7 +37,7 @@ new Vue({
     sayHello: function () {
       return this.hoge;
     },
-    countUp: function () {
+    countUpMethod: function () {
       this.clickNum += 1;
     },
     // $をつける際にはeventとしないと動作しなかった、、、

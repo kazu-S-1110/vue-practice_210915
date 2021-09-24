@@ -33,7 +33,7 @@
       <!-- v-onの引数にはdom操作を指定する -->
       <button v-on:click="clickNum += 1">CountUp1</button>
       <!-- 関数を指定することも可能、引数が無い場合には()を省略してもOK -->
-      <button v-on:click="countUp">CountUp2</button>
+      <!-- <button v-on:click="countUp">CountUp2</button> -->
 
       <!-- 既存のものと合わせて引数を持たせたい場合には$を使用する -->
       <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor, <span v-on:mousemove.stop>
@@ -54,6 +54,11 @@
       <!-- computedプロパティ -->
       <p>{{lessThanThree}}</p>
       <p>{{lessThanThreeMethod()}}</p>
+
+      <!-- methodとcomputedの注意点2 -->
+      <!-- 中括弧内ではcomputedはつけない、メソッドは必ずつける -->
+      <p>{{ countUpComputed}}</p>
+      <p>{{ countUpMethod()}}</p>
 
     </div>
 
