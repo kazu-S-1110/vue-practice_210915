@@ -21,6 +21,8 @@ new Vue({
     isTrue: false,
     color: 'red',
     bg: 'bg-blue',
+    textColor: 'red',
+    bgColor: 'blue',
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {
