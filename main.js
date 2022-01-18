@@ -16,6 +16,9 @@ new Vue({
     x: 0,
     y: 0,
     // dataから別dataにアクセスすることはできない
+
+    isActive: true,
+    isTrue: false,
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {
@@ -26,6 +29,12 @@ new Vue({
     },
     countUpComputed: function () {
       return (this.clickNum += 1);
+    },
+    classObject: function () {
+      return {
+        red: this.isActive,
+        'bg-blue': this.isActive,
+      };
     },
   },
   // methodsは画面がレンダリングされる度に実行される(めっちゃ不便やんけ)、computedは参照している値が変更された時のみ実行される

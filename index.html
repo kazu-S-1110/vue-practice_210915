@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -36,7 +37,7 @@
       <!-- <button v-on:click="countUp">CountUp2</button> -->
 
       <!-- 既存のものと合わせて引数を持たせたい場合には$を使用する -->
-      <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor, <span v-on:mousemove.stop>
+      <p v-on:mousemove="changeMousePosition($event, 4)">On mouseCursor, <span v-on:mousemove.stop>
         and this is non-react
       </span></p>
       <p>X:{{x}}, Y:{{y}}</p>
@@ -57,8 +58,16 @@
 
       <!-- methodとcomputedの注意点2 -->
       <!-- 中括弧内ではcomputedはつけない、メソッドは必ずつける -->
-      <p>{{ countUpComputed}}</p>
-      <p>{{ countUpMethod()}}</p>
+      <!-- <p>{{ countUpComputed}}</p>
+      <p>{{ countUpMethod()}}</p> -->
+
+      <!-- クラスをバインディングする方法、オブジェクトを渡して真偽値を利用して動的に変化させる -->
+      <!-- ケバブケースは表現できないのでシングルクォートで囲む -->
+      <h1 :class="{red: true , 'bg-blue': true}">Hello1</h1>
+      <h1 :class="{red: isActive , 'bg-blue': isActive}">Hello2</h1>
+      <!-- classObjectはVueで宣言することも可能 -->
+      <h1 :class="classObject">Hello3</h1>
+      <button @click="isActive = !isActive">toggle</button>
 
     </div>
 
