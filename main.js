@@ -19,6 +19,8 @@ new Vue({
 
     isActive: true,
     isTrue: false,
+    color: 'red',
+    bg: 'bg-blue',
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {

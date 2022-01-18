@@ -69,6 +69,12 @@
       <h1 :class="classObject">Hello3</h1>
       <button @click="isActive = !isActive">toggle</button>
 
+      <!-- クラスをバインディングする方法、配列で指定してあげる -->
+      <h1 :class="[color, bg]">Hello 4</h1>
+      <!-- 一部だけ直接指定することも可能 -->
+      <h1 :class="[{red: isActive}, bg]">Hello 4</h1>
+
+
     </div>
 
     <script src="./main.js"></script>
