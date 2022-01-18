@@ -23,6 +23,11 @@ new Vue({
     bg: 'bg-blue',
     textColor: 'red',
     bgColor: 'blue',
+
+    styleObject: {
+      color: 'red',
+      'background-color': 'blue',
+    },
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {
