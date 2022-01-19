@@ -3,6 +3,14 @@ new Vue({
   data: {
     ok: false,
     maybeOk: true,
+    fruits: [
+      'apple',
+      'banana',
+      'grape',
+      'strawberry',
+      'pineapple',
+      'chocolate',
+    ],
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {},

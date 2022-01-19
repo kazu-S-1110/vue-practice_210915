@@ -22,6 +22,11 @@
       <!-- 使い分けとしてはv-ifはDOM要素を毎度消して描画してを繰り返すので頻繁に表示非表示を切り替えるものには向かない（重たい表示物ならなおさら） -->
       <!-- v-showの場合、初回レンダリングに必ず描画されるので非表示にする際のコストは低い。逆に初回レンダリングは遅くなるので注意。 -->
       <p v-show="ok">This is show</p>
+
+      <!-- v-forディレクティブ、ReactでいうMap -->
+      <ul>
+        <li v-for="fruit in fruits">{{fruit}}</li>
+      </ul>
     </div>
 
     <script src="./main.js"></script>
