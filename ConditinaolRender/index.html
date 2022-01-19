@@ -26,6 +26,8 @@
       <!-- v-forディレクティブ、ReactでいうMap -->
       <ul>
         <li v-for="fruit in fruits">{{fruit}}</li>
+        <!-- 2つ目にIndexを取ることが可能 -->
+        <li v-for="(fruit, index) in fruits">{{index + 1}} {{ fruit}}</li>
       </ul>
     </div>
 
