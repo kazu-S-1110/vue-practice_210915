@@ -12,6 +12,8 @@
     <div id="app">
       <!-- v-ifの真偽値によって表示非表示を操る -->
       <p v-if="ok">OK!</p>
+      <!-- v-elseをすることでelse文を使用することが可能、ただし直下に書くこと 余計なタグを挟むとelse文は動作しない -->
+      <p v-else>Not OK... </p>
       <button @click="ok = !ok">toggle</button>
     </div>
 
