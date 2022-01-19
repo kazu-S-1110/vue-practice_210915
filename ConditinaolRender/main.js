@@ -2,6 +2,7 @@ new Vue({
   el: '#app',
   data: {
     ok: false,
+    maybeOk: true,
   },
   // dataの値に応じて動的に表現するとき、computedプロパティを使用する
   computed: {},
